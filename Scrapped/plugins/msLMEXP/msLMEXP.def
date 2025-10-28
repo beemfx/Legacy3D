@@ -1,7 +1,0 @@
-; msMLEXP.def : Declares the module parameters for the DLL.
-
-LIBRARY      "msLMEXP"
-
-EXPORTS
-    ; Explicit exports can go here
-    CreatePlugIn

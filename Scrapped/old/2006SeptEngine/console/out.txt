@@ -1,5 +1,0 @@
-set "save1" "one"
-set "save2" "two"
-set "nosave1" "three"
-set "nosave2" "four"
-set "nosave3" "five"

@@ -1,4 +1,0 @@
-LIBRARY	"msL3DM"
-
-EXPORTS
-	CreatePlugIn
