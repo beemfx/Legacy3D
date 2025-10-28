@@ -1,0 +1,34 @@
+[BITS 32] ;Set 32 bit code generation.
+
+[SECTION .code] ;Section containing code.
+
+
+;EXPORT SYMBOLS
+
+global _L_nextpow2_ASM;
+
+;FUNCTIONS
+
+; L_nextpow2_ASM()
+;
+; Prototype: L_dword __cdecl L_nextpow2(L_dword n);
+; Raises a value to the next nearest power of 2
+; primarily designed to find texture sizes that would
+; be power 2 compatible.  This code was taken from a
+; forum on www.gamedev.net and was modified for NASM
+; assembly.
+
+_L_nextpow2_ASM:        ;Function is __cdecl
+	mov ecx, [esp+4] ;Get the value we want to test from the stack (n).
+	dec ecx          ;Decrease ecx (n) by 1, this way, when we find the next highest power of 2 if the value was already a power of 2 it will be the same value.
+	bsr ecx, ecx     ;Perfrom a bsr on ecx, which gets the first bit that is set to 1, this is will be the power we need to increase by minus 1.
+	inc ecx          ;Increase that number by 1 (this give us the power we want to increase to).
+	mov eax, 1       ;Set eax to one,
+	shl eax, cl      ;then left shift it to set it to the power we need.
+	ret              ;Return control to the caller.
+
+_L_pow2:
+	mov cl, [esp+4]
+	mov eax, 0x00000001
+	shl eax, cl
+	ret

@@ -1,0 +1,10 @@
+; lw3DWS.def : Declares the module parameters for the DLL.
+
+LIBRARY      "lw3DWS"
+
+EXPORTS
+    PluginClass
+    PluginFileExtension
+    PluginExport
+    PluginDescription
+    PluginLabel

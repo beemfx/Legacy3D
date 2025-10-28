@@ -1,0 +1,34 @@
+EXPORTS
+	Arc_Open
+	Arc_Close
+	Arc_Extract
+	Arc_GetNumFiles
+	Arc_GetFilename
+	Arc_GetFileSize
+
+	Arc_Archive
+
+	LF_Init
+	LF_Shutdown
+	LF_AddArchive
+	LF_CloseAllArchives
+	LF_ChangeDir
+	LF_ShowPaths
+	LF_GetDir
+	LF_SetError
+	LF_GetLastError
+
+	File_Open
+	File_Close
+	File_Read
+	File_Write
+	File_Seek
+	File_Tell
+	File_GetSize
+	File_GetMemPointer
+	
+	File_fopen
+	File_fclose
+	File_fseek
+	File_ftell
+	File_fread

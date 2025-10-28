@@ -1,0 +1,40 @@
+EXPORTS
+	Con_Create
+	Con_Delete
+	Con_SendMessage
+	Con_SendErrorMsg
+	Con_SendCommand
+	Con_SetCurrent
+	Con_EraseCurrent
+	Con_Clear
+	Con_GetNumEntries
+	Con_GetEntry
+	Con_RegisterCmd
+	Con_OnChar
+	Con_AttachCVarList
+
+	CCParse_GetParam
+	CCParse_GetFloat
+	CCParse_GetInt
+	CCParse_CheckParam
+
+	Con_CreateDlgBox
+
+
+
+	CVar_CreateList
+	CVar_DeleteList
+
+	CVar_Register
+
+	CVar_Set
+	CVar_SetValue
+
+	CVar_Get
+	CVar_GetValue
+
+	CVar_GetCVar
+	CVar_GetFirstCVar
+
+	CVar_AddDef
+	CVar_GetDef

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\lm_sys">
+      <UniqueIdentifier>{32acc935-b35f-48aa-a3be-d015e3c6bbca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\lp_sys">
+      <UniqueIdentifier>{78533b8a-88f8-4ada-b237-f4f01ff0ae01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ls_sys">
+      <UniqueIdentifier>{b33da529-9bd4-4a00-a7ce-af46e14057eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lx_sys">
+      <UniqueIdentifier>{e2300813-5a5b-480d-9931-7167c9a6ab72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lv_sys">
+      <UniqueIdentifier>{cde19065-cb4d-4950-80e7-8d64f8f44345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lg_sys">
+      <UniqueIdentifier>{51743c61-6fb5-4c6e-b6c1-c5f9bb9c6c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lw_sys">
+      <UniqueIdentifier>{075decdc-3227-4a99-bc2a-1804a2de3397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\wnd_sys">
+      <UniqueIdentifier>{6541a8b5-6a9c-42dd-b9bb-b0a2ee5f5d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\lm_sys">
+      <UniqueIdentifier>{dca12385-79f4-4428-ac9b-ea15d7098401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lp_sys">
+      <UniqueIdentifier>{ed9966f3-f631-46eb-b401-101663823818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ls_sys">
+      <UniqueIdentifier>{504ac460-47f0-4822-9f9e-0f1ab0f3bba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lx_sys">
+      <UniqueIdentifier>{8fc03af2-f1cf-4316-8c3e-7a717af02a38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lv_sys">
+      <UniqueIdentifier>{0ca110bd-e7a2-4d1f-9d9d-b66e9b902535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lg_sys">
+      <UniqueIdentifier>{7246d2f7-e255-4b9c-aa93-153b25911884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lw_sys">
+      <UniqueIdentifier>{935a6482-8ad6-4e9f-bfc8-1078560aff98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{f17c25f0-22dc-43ef-a062-9e1298fa881a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\ML_lib">
+      <UniqueIdentifier>{219782d8-d3c7-47d6-aa60-2c5747189f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{74e704bb-8f46-4921-b9d8-1bd84edc02a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lf_sys2">
+      <UniqueIdentifier>{a2931d5d-81d8-416e-935b-27e07384f90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\zlib123">
+      <UniqueIdentifier>{e1e1bc54-5d80-4a6e-8182-e268df9198be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lc_sys2">
+      <UniqueIdentifier>{851ef85b-db2f-44c0-a636-ee4344b404ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\expat201">
+      <UniqueIdentifier>{408fe799-e78f-467a-abc0-b0055258c47b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ld_sys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="li_sys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lt_sys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lvf_sys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win_sys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ws_sys\ws_file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_mesh2.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_mesh_anim.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_mesh_lg.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_mesh_tree.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_skel2.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_skel_lg.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lm_sys\lm_skin.cpp">
+      <Filter>Source Files\lm_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lp_legacy.cpp">
+      <Filter>Source Files\lp_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lp_newton2.cpp">
+      <Filter>Source Files\lp_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lp_physx2.cpp">
+      <Filter>Source Files\lp_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lp_sys2.cpp">
+      <Filter>Source Files\lp_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_ogg.c">
+      <Filter>Source Files\ls_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_sndfile.cpp">
+      <Filter>Source Files\ls_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_stream.cpp">
+      <Filter>Source Files\ls_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_sys.cpp">
+      <Filter>Source Files\ls_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="ls_wav.c">
+      <Filter>Source Files\ls_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_ent_template.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_level.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_mesh_tree.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_mtr.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_object.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_skin.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lx_sys.cpp">
+      <Filter>Source Files\lx_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_con.cpp">
+      <Filter>Source Files\lv_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_font.cpp">
+      <Filter>Source Files\lv_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_img2d.cpp">
+      <Filter>Source Files\lv_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lv_sys.cpp">
+      <Filter>Source Files\lv_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_cmd.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_cvars.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_elements.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_err.c">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_err_ex.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lg_func.c">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_fxmgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_list_stack.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lg_malloc.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_mem_file.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_mgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_mmgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_mtr_mgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_skin_mgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_sys.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_sys_init.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_tmgr.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_video.cpp">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lg_xml.c">
+      <Filter>Source Files\lg_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lw_ai.cpp">
+      <Filter>Source Files\lw_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lw_client.cpp">
+      <Filter>Source Files\lw_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lw_map.cpp">
+      <Filter>Source Files\lw_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lw_server.cpp">
+      <Filter>Source Files\lw_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="lw_skybox.cpp">
+      <Filter>Source Files\lw_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd_sys\wnd_manager.cpp">
+      <Filter>Source Files\wnd_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="wnd_sys\wnd_window.cpp">
+      <Filter>Source Files\wnd_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_aabb.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_main.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_mat_F.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_misc_F.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_plane.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_quat.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_vec3_F.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\lg_string.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_bdio.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_bdio_ex.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_c_interface.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_err.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_file.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_fs2.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_list_stack.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_lpk.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_mem.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_misc.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lf_sys2\lf_win.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\adler32.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\compress.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\crc32.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\deflate.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\gzio.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\infback.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\inffast.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\inflate.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\inftrees.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\minigzip.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\trees.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\uncompr.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib123\zutil.c">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_cinterface.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_cvar.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_def_ANSI.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_def_UNICODE.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_sys2_ANSI.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lc_sys2\lc_sys2_UNICODE.cpp">
+      <Filter>lc_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat201\xmlparse.c">
+      <Filter>3rdParty\expat201</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat201\xmlrole.c">
+      <Filter>3rdParty\expat201</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat201\xmltok.c">
+      <Filter>3rdParty\expat201</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat201\xmltok_impl.c">
+      <Filter>3rdParty\expat201</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\expat201\xmltok_ns.c">
+      <Filter>3rdParty\expat201</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\l3d01.ico">
+      <Filter>Source Files\Resource Files</Filter>
+    </Image>
+    <Image Include="res\l3d02.ico">
+      <Filter>Source Files\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="legacy3d.rc">
+      <Filter>Source Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="wnd_sys\wnd_manager.h">
+      <Filter>Source Files\wnd_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="wnd_sys\wnd_window.h">
+      <Filter>Source Files\wnd_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ld_sys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lg_sdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="li_sys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lt_sys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lvf_sys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ws_sys\ws_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_base.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_mesh.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_mesh_anim.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_mesh_lg.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_mesh_tree.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_skel.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_skel_lg.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lm_sys\lm_skin.h">
+      <Filter>Header Files\lm_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lp_legacy.h">
+      <Filter>Header Files\lp_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lp_newton2.h">
+      <Filter>Header Files\lp_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lp_physx2.h">
+      <Filter>Header Files\lp_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lp_sys2.h">
+      <Filter>Header Files\lp_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_ogg.h">
+      <Filter>Header Files\ls_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_sndfile.h">
+      <Filter>Header Files\ls_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_stream.h">
+      <Filter>Header Files\ls_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_sys.h">
+      <Filter>Header Files\ls_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ls_wav.h">
+      <Filter>Header Files\ls_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lx_sys.h">
+      <Filter>Header Files\lx_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_con.h">
+      <Filter>Header Files\lv_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_font.h">
+      <Filter>Header Files\lv_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_img2d.h">
+      <Filter>Header Files\lv_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lv_sys.h">
+      <Filter>Header Files\lv_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_cmd.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_cvars.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_err.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_err_ex.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lg_func.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_fxmgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_hash_mgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_list.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_list_stack.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lg_malloc.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_mem_file.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_mgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_mmgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_mtr_mgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_skin_mgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_stack.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_sys.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_tmgr.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lg_types.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lg_xml.h">
+      <Filter>Header Files\lg_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_ai.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sdk\lw_ai_sdk.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_client.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sdk\lw_ent_sdk.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_entity.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_map.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_net.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_server.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="lw_skybox.h">
+      <Filter>Header Files\lw_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ML_lib\ML_lib.h">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ML_lib\ML_mat.h">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ML_lib\ML_types.h">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ML_lib\ML_vec3.h">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lg_string.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_bdio.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_file.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_fs2.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_list_stack.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_lpk.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lf_sys2\lf_sys2.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\crc32.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\deflate.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\inffast.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\inffixed.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\inflate.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\inftrees.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\trees.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\zconf.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\zconf.in.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\zlib.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib123\zutil.h">
+      <Filter>3rdParty\zlib123</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lc_sys2\lc_con.h">
+      <Filter>lc_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lc_sys2\lc_cvar.h">
+      <Filter>lc_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lc_sys2\lc_def.h">
+      <Filter>lc_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lc_sys2\lc_sys2.h">
+      <Filter>lc_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\amigaconfig.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\ascii.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\asciitab.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\expat.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\expat_external.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\iasciitab.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\internal.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\latin1tab.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\macconfig.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\nametab.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\utf8tab.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\winconfig.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\xmlrole.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\xmltok.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\expat201\xmltok_impl.h">
+      <Filter>3rdParty\expat201</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DevelopMentLog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm">
+      <Filter>3rdParty\ML_lib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
+      <Filter>3rdParty\ML_lib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\3rdParty\ML_lib\ML_mat.nasm">
+      <Filter>3rdParty\ML_lib</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

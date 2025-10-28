@@ -1,0 +1,9 @@
+; lmsh3DWS.def : Declares the module parameters for the DLL.
+
+LIBRARY      "lmsh3DWS"
+
+EXPORTS
+    PluginClass
+    PluginFileExtension
+    PluginMeshLoad
+    PluginDescription
