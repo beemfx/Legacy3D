@@ -56,7 +56,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include;../3rdParty/openal-soft/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include;../3rdParty/openal-soft/include;../3rdParty/newton-dynamics/newton-3.14/sdk</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>COMPILED_FROM_DSP;XML_BUILDING_EXPAT;XML_STATIC;NOMINMAX;WIN32;USE_LG_NEW;DIRECTINPUT_VERSION=0x0800;__LEGACY_GAME__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -77,7 +77,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include;../3rdParty/openal-soft/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include;../3rdParty/openal-soft/include;../3rdParty/newton-dynamics/newton-3.14/sdk</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>COMPILED_FROM_DSP;XML_BUILDING_EXPAT;XML_STATIC;NOMINMAX;WIN32;USE_LG_NEW;DIRECTINPUT_VERSION=0x0800;__LEGACY_GAME__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader />

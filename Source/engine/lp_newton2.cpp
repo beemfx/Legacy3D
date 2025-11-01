@@ -12,10 +12,10 @@ void CLPhysNewton::Init(lg_dword nMaxBodies)
 	s_pPhys=this;
 	m_fTimeStep=0.0f;
 	Err_Printf("Initializing Newton Game Dynamics physics engine...");
-	m_pNewtonWorld=NewtonCreate(0, 0);//(NewtonAllocMemory)LG_Malloc, (NewtonFreeMemory)LG_Free);
+	m_pNewtonWorld=NewtonCreate();//(NewtonAllocMemory)LG_Malloc, (NewtonFreeMemory)LG_Free);
 	if(!m_pNewtonWorld)
 		throw CLError(LG_ERR_DEFAULT, __FILE__, __LINE__, "Newton Initialization: Could not create physics model.");
-	Err_Printf("Newton World version %i.", NewtonWorldGetVersion(m_pNewtonWorld));
+	Err_Printf("Newton World version %i.", NewtonWorldGetVersion());
 	Err_Printf("Setting up basic materials.");
 	MTR_DEFAULT=0;
 	MTR_DEFAULT=NewtonMaterialGetDefaultGroupID(m_pNewtonWorld);
@@ -96,15 +96,14 @@ lg_void* CLPhysNewton::AddBody(lg_void* pEnt, lp_body_info* pInfo)
 		pInfo->m_aabbBody.v3Max.x-pInfo->m_aabbBody.v3Min.x,
 		pInfo->m_aabbBody.v3Max.y-pInfo->m_aabbBody.v3Min.y,
 		pInfo->m_aabbBody.v3Max.z-pInfo->m_aabbBody.v3Min.z,
+		0,
 		(dFloat*)&matPos);
 		
-	NewtonBody* pBdy=NewtonCreateBody(
+	NewtonBody* pBdy= NewtonCreateDynamicBody(
 		m_pNewtonWorld,
-		pClsn);
-		
-	NewtonReleaseCollision(m_pNewtonWorld, pClsn);
+		pClsn, (dFloat*)&pInfo->m_matPos);
+	NewtonDestroyCollision(pClsn);
 	
-	NewtonBodySetMatrix(pBdy, (dFloat*)&pInfo->m_matPos);
 	#if 0
 	ML_VEC3 v3={
 		pInfo->m_aabbBody.v3Min.x+(pInfo->m_aabbBody.v3Max.x-pInfo->m_aabbBody.v3Min.x)*0.5f,
@@ -116,7 +115,7 @@ lg_void* CLPhysNewton::AddBody(lg_void* pEnt, lp_body_info* pInfo)
 	#endif
 	NewtonBodySetMassMatrix(pBdy, pInfo->m_fMass, pInfo->m_fMass, pInfo->m_fMass, pInfo->m_fMass);
 	NewtonBodySetMaterialGroupID(pBdy, MTR_OBJECT);
-	NewtonBodySetAutoFreeze(pBdy, 0);
+	// NewtonBodySetAutoFreeze(pBdy, 0);
 	NewtonBodySetUserData(pBdy, pEnt);
 	//Set the force and torque callback to the update from srv.
 	NewtonBodySetForceAndTorqueCallback(pBdy, UpdateFromSrv);
@@ -130,7 +129,7 @@ lg_void* CLPhysNewton::AddBody(lg_void* pEnt, lp_body_info* pInfo)
 		NewtonJoint* pUpVec = NewtonConstraintCreateUpVector(m_pNewtonWorld, (dFloat*)&upDirection, pBdy); 
 	}
 	
-	UpdateToSrv(pBdy, (dFloat*)&pInfo->m_matPos);
+	UpdateToSrv(pBdy, (dFloat*)&pInfo->m_matPos, 0);
 	
 	return pBdy;
 	#if 0		
@@ -158,14 +157,14 @@ lg_void* CLPhysNewton::AddBody(lg_void* pEnt, lp_body_info* pInfo)
 void CLPhysNewton::RemoveBody(lg_void* pBody)
 {
 	NewtonBody* pPhysBody=(NewtonBody*)pBody;
-	NewtonDestroyBody(m_pNewtonWorld, pPhysBody);
+	NewtonDestroyBody(pPhysBody);
 }
 
 void CLPhysNewton::SetupWorld(lg_void* pWorldMap)
 {
 	if(m_pWorldBody)
 	{
-		NewtonDestroyBody(m_pNewtonWorld, m_pWorldBody);
+		NewtonDestroyBody(m_pWorldBody);
 		m_pWorldBody=LG_NULL;
 	}
 	
@@ -194,15 +193,18 @@ void CLPhysNewton::SetupWorld(lg_void* pWorldMap)
 	
 	NewtonTreeCollisionEndBuild(pCol, LG_TRUE);
 	
-	m_pWorldBody=NewtonCreateBody(m_pNewtonWorld, pCol);
-	NewtonReleaseCollision(m_pNewtonWorld, pCol);
+	ML_MATRIX Identity;
+	ML_MatIdentity(&Identity);
+	m_pWorldBody=NewtonCreateKinematicBody(m_pNewtonWorld, pCol, (const dFloat*)&Identity);
+	NewtonDestroyCollision(pCol);
 	
 	NewtonBodySetMaterialGroupID(m_pWorldBody, MTR_LEVEL);
-	
+	/*
 	NewtonSetWorldSize(
 		m_pNewtonWorld, 
 		(dFloat*)&pMap->m_aabbMapBounds.v3Min, 
 		(dFloat*)&pMap->m_aabbMapBounds.v3Max);
+	*/
 }
 
 void CLPhysNewton::SetGravity(ML_VEC3* pGrav)
@@ -300,7 +302,7 @@ lg_void* CLPhysNewton::LoadBodySaveInfo(lg_void* pData, lg_dword nSize)
 	return LG_NULL;
 }
 
-void CLPhysNewton::UpdateFromSrv(const NewtonBody* body)
+void CLPhysNewton::UpdateFromSrv(const NewtonBody* const body, dFloat timestep, int threadIndex)
 {
 	static lg_dword nPhysFlags;
 	LEntitySrv* pEnt=(LEntitySrv*)NewtonBodyGetUserData(body);
@@ -375,7 +377,7 @@ void CLPhysNewton::UpdateFromSrv(const NewtonBody* body)
 	#endif
 }
 
-void CLPhysNewton::UpdateToSrv(const NewtonBody* body, const dFloat* matrix)
+void CLPhysNewton::UpdateToSrv(const NewtonBody* const body, const dFloat* const matrix, int threadIndex)
 {
 	LEntitySrv* pEnt=(LEntitySrv*)NewtonBodyGetUserData(body);
 	pEnt->m_matPos=(ML_MAT)*(ML_MAT*)matrix;

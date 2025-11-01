@@ -13,3 +13,6 @@
 [submodule "Source/3rdParty/openal-soft"]
 	path = Source/3rdParty/openal-soft
 	url = https://github.com/kcat/openal-soft.git
+[submodule "Source/3rdParty/newton-dynamics"]
+	path = Source/3rdParty/newton-dynamics
+	url = https://github.com/MADEAPPS/newton-dynamics.git

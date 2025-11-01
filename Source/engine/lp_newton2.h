@@ -1,7 +1,7 @@
 #ifndef __NEWTON2_H__
 #define __NEWTON2_H__
 #include "lp_sys2.h"
-#include "Newton/Newton.h"
+#include "dgNewton/Newton.h"
 
 class CLPhysNewton: CLPhys
 {
@@ -32,8 +32,8 @@ public:
 	virtual lg_void* LoadBodySaveInfo(lg_void* pData, lg_dword nSize);
 	
 private:
-	static void UpdateFromSrv(const NewtonBody* body);
-	static void UpdateToSrv(const NewtonBody* body, const dFloat* matrix);
+	static void UpdateFromSrv(const NewtonBody* const body, dFloat timestep, int threadIndex);
+	static void UpdateToSrv(const NewtonBody* const body, const dFloat* const matrix, int threadIndex);
 	/*typedef void (*NewtonBodyIterator) (const NewtonBody* body);*/
 	
 	static CLPhysNewton* s_pPhys;
