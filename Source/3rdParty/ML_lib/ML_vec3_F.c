@@ -18,7 +18,7 @@
 *** ML_Vec3TransformNormal ***
 ******************************/
 
-ml_vec3* ML_FUNC ML_Vec3Add_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
+ml_vec3* ML_FUNC ML_Vec3Add(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	pOut->x=pV1->x+pV2->x;
 	pOut->y=pV1->y+pV2->y;
@@ -26,7 +26,7 @@ ml_vec3* ML_FUNC ML_Vec3Add_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* 
 	return pOut;
 }
 
-ml_vec3* ML_FUNC ML_Vec3Subtract_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
+ml_vec3* ML_FUNC ML_Vec3Subtract(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	pOut->x=pV1->x-pV2->x;
 	pOut->y=pV1->y-pV2->y;
@@ -34,7 +34,7 @@ ml_vec3* ML_FUNC ML_Vec3Subtract_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_v
 	return pOut;
 }
 
-ml_vec3* ML_FUNC ML_Vec3Cross_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
+ml_vec3* ML_FUNC ML_Vec3Cross(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	ml_vec3 v3Res;
 	v3Res.x=pV1->y*pV2->z - pV1->z*pV2->y;
@@ -44,22 +44,22 @@ ml_vec3* ML_FUNC ML_Vec3Cross_F(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3
 	return pOut;
 }
 
-ml_float ML_FUNC ML_Vec3Dot_F(const ml_vec3* pV1, const ml_vec3* pV2)
+ml_float ML_FUNC ML_Vec3Dot(const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	return pV1->x*pV2->x + pV1->y*pV2->y + pV1->z*pV2->z;
 }
 
-ml_float ML_FUNC ML_Vec3Length_F(const ml_vec3* pV)
+ml_float ML_FUNC ML_Vec3Length(const ml_vec3* pV)
 {
 	return ML_sqrtf(pV->x*pV->x + pV->y*pV->y + pV->z*pV->z);
 }
 
-ml_float ML_FUNC ML_Vec3LengthSq_F(const ml_vec3* pV)
+ml_float ML_FUNC ML_Vec3LengthSq(const ml_vec3* pV)
 {
 	return pV->x*pV->x + pV->y*pV->y + pV->z*pV->z;
 }
 
-ml_vec3* ML_FUNC ML_Vec3Normalize_F(ml_vec3* pOut, const ml_vec3* pV)
+ml_vec3* ML_FUNC ML_Vec3Normalize(ml_vec3* pOut, const ml_vec3* pV)
 {
 	ml_float fLen=1.0f/ML_Vec3Length(pV);
 	
@@ -70,7 +70,7 @@ ml_vec3* ML_FUNC ML_Vec3Normalize_F(ml_vec3* pOut, const ml_vec3* pV)
 }
 
 
-ml_vec3* ML_FUNC ML_Vec3Scale_F(ml_vec3* pOut, const ml_vec3* pV, ml_float s)
+ml_vec3* ML_FUNC ML_Vec3Scale(ml_vec3* pOut, const ml_vec3* pV, ml_float s)
 {
 	pOut->x=pV->x*s;
 	pOut->y=pV->y*s;
@@ -79,7 +79,7 @@ ml_vec3* ML_FUNC ML_Vec3Scale_F(ml_vec3* pOut, const ml_vec3* pV, ml_float s)
 }
 
 
-ml_float ML_FUNC ML_Vec3Distance_F(const ml_vec3* pV1, const ml_vec3* pV2)
+ml_float ML_FUNC ML_Vec3Distance(const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	ml_vec3 v3T;
 	v3T.x=pV1->x - pV2->x;
@@ -88,7 +88,7 @@ ml_float ML_FUNC ML_Vec3Distance_F(const ml_vec3* pV1, const ml_vec3* pV2)
 	return ML_Vec3Length(&v3T);
 }
 
-ml_float ML_FUNC ML_Vec3DistanceSq_F(const ml_vec3* pV1, const ml_vec3* pV2)
+ml_float ML_FUNC ML_Vec3DistanceSq(const ml_vec3* pV1, const ml_vec3* pV2)
 {
 	ml_vec3 v3T;
 	v3T.x=pV1->x - pV2->x;
@@ -98,7 +98,7 @@ ml_float ML_FUNC ML_Vec3DistanceSq_F(const ml_vec3* pV1, const ml_vec3* pV2)
 }
 
 
-ml_vec4* ML_FUNC ML_Vec3Transform_F(ml_vec4* pOut, const ml_vec3* pV, const ml_mat* pM)
+ml_vec4* ML_FUNC ML_Vec3Transform(ml_vec4* pOut, const ml_vec3* pV, const ml_mat* pM)
 {
 	//Just do pM * (pV, 1.0)
 	//We know that pOut can't be pV, so we don't need to worry about
@@ -117,7 +117,7 @@ ml_vec4* ML_FUNC ML_Vec3Transform_F(ml_vec4* pOut, const ml_vec3* pV, const ml_m
 }
 
 
-ml_vec3* ML_FUNC ML_Vec3TransformCoord_F(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM)
+ml_vec3* ML_FUNC ML_Vec3TransformCoord(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM)
 {
 	ml_vec3  v3Res;
 	ml_float w;
@@ -133,7 +133,7 @@ ml_vec3* ML_FUNC ML_Vec3TransformCoord_F(ml_vec3* pOut, const ml_vec3* pV, const
 }
 
 
-ml_vec3* ML_FUNC ML_Vec3TransformNormal_F(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM)
+ml_vec3* ML_FUNC ML_Vec3TransformNormal(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM)
 {
 	//Transform normal is only concerned with the rotation portion of the matrix:
 	ml_vec3 v3Res;

@@ -131,7 +131,7 @@ float ML_FUNC ML_MatDeterminant(ml_mat* pM)
 }
 
 /* C Code Using Cramer's Rule Provided by Intel (tm) */
-ml_mat* ML_FUNC ML_MatInverse_F(ml_mat* pOut, ml_float* pDet, const ml_mat* pM)
+ml_mat* ML_FUNC ML_MatInverse(ml_mat* pOut, ml_float* pDet, const ml_mat* pM)
 {
 	float tmp[12]; /* temp array for pairs */
 	float src[16]; /* array of transpose source matrix */

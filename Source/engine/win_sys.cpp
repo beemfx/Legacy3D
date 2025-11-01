@@ -27,11 +27,11 @@
 	here as it makes it easier if I have to re-construct
 	the project. */
 
-#pragma comment(lib, "d3dx9_x86.lib")
+#pragma comment(lib, "d3dx9.lib")
 
-#pragma comment(lib, "ogg.lib")
-#pragma comment(lib, "vorbis.lib")
-#pragma comment(lib, "vorbisfile.lib")
+// #pragma comment(lib, "ogg.lib")
+// #pragma comment(lib, "vorbis.lib")
+// #pragma comment(lib, "vorbisfile.lib")
 
 
 #pragma comment(lib, "d3d9.lib")
@@ -40,8 +40,8 @@
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "dinput8.lib")
 
-#pragma comment(lib, "OpenAl32.lib")
-#pragma comment(lib, "Newton.lib")
+// #pragma comment(lib, "OpenAl32.lib")
+// #pragma comment(lib, "Newton.lib")
 
 #include "common.h"
 #include "lg_func.h"

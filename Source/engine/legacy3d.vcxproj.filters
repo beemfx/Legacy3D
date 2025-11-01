@@ -381,6 +381,9 @@
     <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_ns.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_mat.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\l3d01.ico">

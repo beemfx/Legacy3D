@@ -8,9 +8,8 @@ extern "C" {
 #endif __cplusplus
 
 #ifdef ML_LIB_MAIN
-#define ML_DECLARE_FUNC(out, fn) out (ML_FUNC * fn)
+
 #else !ML_LIB_MAIN
-#define ML_DECLARE_FUNC(out, fn) extern out (ML_FUNC * fn)
 extern const ml_mat ML_matIdentity;
 extern const ml_vec3 ML_v3Zero;
 #endif ML_LIB_MAIN
@@ -36,40 +35,29 @@ typedef enum _ML_INSTR{
 	NOTE: Must be called before any ML_* functions are used.
 */
 ml_bool ML_FUNC ML_Init(ML_INSTR nInstr);
-/* PRE: N/A
-	POST: Returns true if the specified instruction
-	set is supported.
-*/
-ml_bool  ML_FUNC ML_InstrSupport(ML_INSTR nInstr);
-/* PRE: N/A
-	POST: Returns the best available instruction set
-	for the processor.
-*/
-ML_INSTR ML_FUNC ML_GetBestSupport();
-
 
 /************************
 *** ml_vec3 functions ***
 ************************/
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3Add)(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3Subtract)(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3Cross)(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_float, ML_Vec3Dot)(const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_float, ML_Vec3Length)(const ml_vec3* pV);
-ML_DECLARE_FUNC(ml_float, ML_Vec3LengthSq)(const ml_vec3* pV);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3Normalize)(ml_vec3* pOut, const ml_vec3* pV);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3Scale)(ml_vec3* pOut, const ml_vec3* pV, ml_float s);
-ML_DECLARE_FUNC(ml_float, ML_Vec3Distance)(const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_float, ML_Vec3DistanceSq)(const ml_vec3* pV1, const ml_vec3* pV2);
-ML_DECLARE_FUNC(ml_vec4*, ML_Vec3Transform)(ml_vec4* pOut, const ml_vec3* pV, const ml_mat* pM);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3TransformCoord)(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM);
-ML_DECLARE_FUNC(ml_vec3*, ML_Vec3TransformNormal)(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM);
+ml_vec3* ML_Vec3Add(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
+ml_vec3* ML_Vec3Subtract(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
+ml_vec3* ML_Vec3Cross(ml_vec3* pOut, const ml_vec3* pV1, const ml_vec3* pV2);
+ml_float ML_Vec3Dot(const ml_vec3* pV1, const ml_vec3* pV2);
+ml_float ML_Vec3Length(const ml_vec3* pV);
+ml_float ML_Vec3LengthSq(const ml_vec3* pV);
+ml_vec3* ML_Vec3Normalize(ml_vec3* pOut, const ml_vec3* pV);
+ml_vec3* ML_Vec3Scale(ml_vec3* pOut, const ml_vec3* pV, ml_float s);
+ml_float ML_Vec3Distance(const ml_vec3* pV1, const ml_vec3* pV2);
+ml_float ML_Vec3DistanceSq(const ml_vec3* pV1, const ml_vec3* pV2);
+ml_vec4* ML_Vec3Transform(ml_vec4* pOut, const ml_vec3* pV, const ml_mat* pM);
+ml_vec3* ML_Vec3TransformCoord(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM);
+ml_vec3* ML_Vec3TransformNormal(ml_vec3* pOut, const ml_vec3* pV, const ml_mat* pM);
 
 /***********************
 *** ml_mat functions *** 
 ***********************/
 ml_mat*  ML_FUNC ML_MatIdentity(ml_mat* pOut);
-ML_DECLARE_FUNC(ml_mat*, ML_MatMultiply)(ml_mat* pOut, const ml_mat* pM1, const ml_mat* pM2);
+ml_mat* ML_MatMultiply(ml_mat* pOut, const ml_mat* pM1, const ml_mat* pM2);
 ml_mat*  ML_FUNC ML_MatRotationX(ml_mat* pOut, ml_float fAngle);
 ml_mat*  ML_FUNC ML_MatRotationY(ml_mat* pOut, ml_float fAngle);
 ml_mat*  ML_FUNC ML_MatRotationZ(ml_mat* pOut, ml_float fAngle);
@@ -81,7 +69,7 @@ ml_mat*  ML_FUNC ML_MatLookAtLH(ml_mat* pOut, const ml_vec3* pEye, const ml_vec3
 ml_mat*  ML_FUNC ML_MatRotationQuat(ml_mat* pOut, const ML_QUAT* pQ);
 ml_mat*  ML_FUNC ML_MatSlerp(ml_mat* pOut, ml_mat* pM1, ml_mat* pM2, ml_float t);
 ml_float ML_FUNC ML_MatDeterminant(ml_mat* pM);
-ML_DECLARE_FUNC(ml_mat*, ML_MatInverse)(ml_mat* pOut, ml_float* pDet, const ml_mat* pM);
+ml_mat* ML_MatInverse(ml_mat* pOut, ml_float* pDet, const ml_mat* pM);
 ml_mat*  ML_FUNC ML_MatTranslation(ml_mat* pOut, ml_float x, ml_float y, ml_float z);
 
 

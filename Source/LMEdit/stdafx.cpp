@@ -6,4 +6,4 @@
 
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "d3d9.lib")
-#pragma comment(lib, "d3dx9_x86.lib")
+#pragma comment(lib, "d3dx9.lib")

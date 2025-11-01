@@ -66,7 +66,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\3rdParty\dxlib\;..\3rdParty\Newton;..\3rdParty\al;..\common;..\3rdParty\ogg;..\3rdParty\img_lib2;..\3rdParty;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\3rdParty\dxlib\;..\3rdParty\Newton;..\3rdParty\al;..\common;..\3rdParty\ogg;..\3rdParty\img_lib2;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\release\lib\x86</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -86,7 +86,7 @@
       <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\3rdParty\dxlib\;..\3rdParty\Newton;..\3rdParty\al;..\common;..\3rdParty\ogg;..\3rdParty\img_lib2;..\3rdParty;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\3rdParty\dxlib\;..\3rdParty\Newton;..\3rdParty\al;..\common;..\3rdParty\ogg;..\3rdParty\img_lib2;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\release\lib\x86</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -109,6 +109,7 @@
     <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_ns.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_aabb.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_main.c" />
+    <ClCompile Include="..\3rdParty\ML_lib\ML_mat.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_mat_F.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_misc_F.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_plane.c" />
