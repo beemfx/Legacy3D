@@ -14,19 +14,19 @@
     <ProjectGuid>{80C50316-FBE4-4680-B4BF-F5D0BEFEBD8A}</ProjectGuid>
     <RootNamespace>LMEdit</RootNamespace>
     <Keyword>MFCProj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -44,13 +44,13 @@
     <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(BEEMOUT)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
     <IntDir>$(OutDir)</IntDir>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(BEEMOUT)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
     <IntDir>$(OutDir)</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>

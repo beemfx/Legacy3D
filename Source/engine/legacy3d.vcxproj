@@ -14,18 +14,18 @@
     <ProjectGuid>{F8D47696-AB3C-48D8-BFB9-CE00E6D87F62}</ProjectGuid>
     <RootNamespace>legacy3d</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -43,13 +43,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ReferencePath>..\common;$(ReferencePath)</ReferencePath>
-    <OutDir>$(BEEMOUT)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
     <IntDir>$(OutDir)</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ReferencePath>..\common;$(ReferencePath)</ReferencePath>
-    <OutDir>$(BEEMOUT)\$(ProjectName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
     <IntDir>$(OutDir)</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -331,33 +331,15 @@
     <Text Include="DevelopMentLog.txt" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_mat.nasm">
+    <None Include="..\3rdParty\ML_lib\ML_mat.nasm">
       <FileType>Document</FileType>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-    </CustomBuild>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm">
+    </None>
+    <None Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
+    </None>
+    <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"../tools/nasmw.exe" -f win32 "%(FullPath)" -o "$(TargetDir)%(Filename).obj" -X vc</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).obj</Outputs>
-    </CustomBuild>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

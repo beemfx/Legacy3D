@@ -719,14 +719,14 @@
     <Text Include="DevelopMentLog.txt" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm">
+    <None Include="..\3rdParty\ML_lib\ML_mat.nasm">
       <Filter>3rdParty\ML_lib</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
+    </None>
+    <None Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm">
       <Filter>3rdParty\ML_lib</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_mat.nasm">
+    </None>
+    <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
       <Filter>3rdParty\ML_lib</Filter>
-    </CustomBuild>
+    </None>
   </ItemGroup>
 </Project>
