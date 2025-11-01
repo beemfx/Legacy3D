@@ -10,3 +10,6 @@
 [submodule "Source/3rdParty/zlib"]
 	path = Source/3rdParty/zlib
 	url = https://github.com/madler/zlib.git
+[submodule "Source/3rdParty/openal-soft"]
+	path = Source/3rdParty/openal-soft
+	url = https://github.com/kcat/openal-soft.git
