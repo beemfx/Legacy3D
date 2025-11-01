@@ -56,9 +56,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../3rdParty/zlib123/;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/;../common/;../3rdParty/expat201/;./;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>COMPILED_FROM_DSP;XML_BUILDING_EXPAT;XML_STATIC;NOMINMAX;WIN32;USE_LG_NEW;DIRECTINPUT_VERSION=0x0800;__LEGACY_GAME__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader />
@@ -78,7 +77,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>../3rdParty/zlib123/;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/;../common/;../3rdParty/expat201/;./;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3rdParty/zlib;../lc_sys2/;../3rdParty/dxlib/inc/d3d9/;../3rdParty/ML_lib/;../lm_sys/;../sdk/;../3rdParty/;../lf_sys2;../3rdParty/ogg/include;../common/;../3rdParty/libexpat/expat/lib;./;../3rdParty/vorbis/include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>COMPILED_FROM_DSP;XML_BUILDING_EXPAT;XML_STATIC;NOMINMAX;WIN32;USE_LG_NEW;DIRECTINPUT_VERSION=0x0800;__LEGACY_GAME__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader />
@@ -103,11 +102,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\3rdParty\expat201\xmlparse.c" />
-    <ClCompile Include="..\3rdParty\expat201\xmlrole.c" />
-    <ClCompile Include="..\3rdParty\expat201\xmltok.c" />
-    <ClCompile Include="..\3rdParty\expat201\xmltok_impl.c" />
-    <ClCompile Include="..\3rdParty\expat201\xmltok_ns.c" />
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmlparse.c" />
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmlrole.c" />
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok.c" />
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_impl.c" />
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_ns.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_aabb.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_main.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_mat_F.c" />
@@ -115,19 +114,16 @@
     <ClCompile Include="..\3rdParty\ML_lib\ML_plane.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_quat.c" />
     <ClCompile Include="..\3rdParty\ML_lib\ML_vec3_F.c" />
-    <ClCompile Include="..\3rdParty\zlib123\adler32.c" />
-    <ClCompile Include="..\3rdParty\zlib123\compress.c" />
-    <ClCompile Include="..\3rdParty\zlib123\crc32.c" />
-    <ClCompile Include="..\3rdParty\zlib123\deflate.c" />
-    <ClCompile Include="..\3rdParty\zlib123\gzio.c" />
-    <ClCompile Include="..\3rdParty\zlib123\infback.c" />
-    <ClCompile Include="..\3rdParty\zlib123\inffast.c" />
-    <ClCompile Include="..\3rdParty\zlib123\inflate.c" />
-    <ClCompile Include="..\3rdParty\zlib123\inftrees.c" />
-    <ClCompile Include="..\3rdParty\zlib123\minigzip.c" />
-    <ClCompile Include="..\3rdParty\zlib123\trees.c" />
-    <ClCompile Include="..\3rdParty\zlib123\uncompr.c" />
-    <ClCompile Include="..\3rdParty\zlib123\zutil.c" />
+    <ClCompile Include="..\3rdParty\zlib\adler32.c" />
+    <ClCompile Include="..\3rdParty\zlib\compress.c" />
+    <ClCompile Include="..\3rdParty\zlib\crc32.c" />
+    <ClCompile Include="..\3rdParty\zlib\deflate.c" />
+    <ClCompile Include="..\3rdParty\zlib\infback.c" />
+    <ClCompile Include="..\3rdParty\zlib\inffast.c" />
+    <ClCompile Include="..\3rdParty\zlib\inflate.c" />
+    <ClCompile Include="..\3rdParty\zlib\inftrees.c" />
+    <ClCompile Include="..\3rdParty\zlib\trees.c" />
+    <ClCompile Include="..\3rdParty\zlib\uncompr.c" />
     <ClCompile Include="..\common\common.c" />
     <ClCompile Include="..\common\lg_func.c" />
     <ClCompile Include="..\common\lg_malloc.cpp" />
@@ -223,36 +219,33 @@
     <ResourceCompile Include="legacy3d.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\3rdParty\expat201\amigaconfig.h" />
-    <ClInclude Include="..\3rdParty\expat201\ascii.h" />
-    <ClInclude Include="..\3rdParty\expat201\asciitab.h" />
-    <ClInclude Include="..\3rdParty\expat201\expat.h" />
-    <ClInclude Include="..\3rdParty\expat201\expat_external.h" />
-    <ClInclude Include="..\3rdParty\expat201\iasciitab.h" />
-    <ClInclude Include="..\3rdParty\expat201\internal.h" />
-    <ClInclude Include="..\3rdParty\expat201\latin1tab.h" />
-    <ClInclude Include="..\3rdParty\expat201\macconfig.h" />
-    <ClInclude Include="..\3rdParty\expat201\nametab.h" />
-    <ClInclude Include="..\3rdParty\expat201\utf8tab.h" />
-    <ClInclude Include="..\3rdParty\expat201\winconfig.h" />
-    <ClInclude Include="..\3rdParty\expat201\xmlrole.h" />
-    <ClInclude Include="..\3rdParty\expat201\xmltok.h" />
-    <ClInclude Include="..\3rdParty\expat201\xmltok_impl.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\ascii.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\asciitab.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\expat.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\expat_external.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\iasciitab.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\internal.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\latin1tab.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\nametab.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\siphash.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\utf8tab.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\winconfig.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmlrole.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmltok.h" />
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmltok_impl.h" />
     <ClInclude Include="..\3rdParty\ML_lib\ML_lib.h" />
     <ClInclude Include="..\3rdParty\ML_lib\ML_mat.h" />
     <ClInclude Include="..\3rdParty\ML_lib\ML_types.h" />
     <ClInclude Include="..\3rdParty\ML_lib\ML_vec3.h" />
-    <ClInclude Include="..\3rdParty\zlib123\crc32.h" />
-    <ClInclude Include="..\3rdParty\zlib123\deflate.h" />
-    <ClInclude Include="..\3rdParty\zlib123\inffast.h" />
-    <ClInclude Include="..\3rdParty\zlib123\inffixed.h" />
-    <ClInclude Include="..\3rdParty\zlib123\inflate.h" />
-    <ClInclude Include="..\3rdParty\zlib123\inftrees.h" />
-    <ClInclude Include="..\3rdParty\zlib123\trees.h" />
-    <ClInclude Include="..\3rdParty\zlib123\zconf.h" />
-    <ClInclude Include="..\3rdParty\zlib123\zconf.in.h" />
-    <ClInclude Include="..\3rdParty\zlib123\zlib.h" />
-    <ClInclude Include="..\3rdParty\zlib123\zutil.h" />
+    <ClInclude Include="..\3rdParty\zlib\crc32.h" />
+    <ClInclude Include="..\3rdParty\zlib\deflate.h" />
+    <ClInclude Include="..\3rdParty\zlib\inffast.h" />
+    <ClInclude Include="..\3rdParty\zlib\inffixed.h" />
+    <ClInclude Include="..\3rdParty\zlib\inflate.h" />
+    <ClInclude Include="..\3rdParty\zlib\inftrees.h" />
+    <ClInclude Include="..\3rdParty\zlib\trees.h" />
+    <ClInclude Include="..\3rdParty\zlib\zconf.h" />
+    <ClInclude Include="..\3rdParty\zlib\zlib.h" />
     <ClInclude Include="..\common\common.h" />
     <ClInclude Include="..\common\lg_func.h" />
     <ClInclude Include="..\common\lg_malloc.h" />
@@ -280,6 +273,7 @@
     <ClInclude Include="..\sdk\lw_ai_sdk.h" />
     <ClInclude Include="..\sdk\lw_ent_sdk.h" />
     <ClInclude Include="..\ws_sys\ws_file.h" />
+    <ClInclude Include="expat_config.h" />
     <ClInclude Include="ld_sys.h" />
     <ClInclude Include="lg_cmd.h" />
     <ClInclude Include="lg_cvars.h" />
@@ -340,6 +334,8 @@
     <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
       <FileType>Document</FileType>
     </None>
+    <None Include="..\3rdParty\zlib\LICENSE" />
+    <None Include="..\3rdParty\zlib\README" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,3 +4,9 @@
 [submodule "Source/3rdParty/ogg"]
 	path = Source/3rdParty/ogg
 	url = https://github.com/xiph/ogg.git
+[submodule "Source/3rdParty/libexpat"]
+	path = Source/3rdParty/libexpat
+	url = https://github.com/libexpat/libexpat.git
+[submodule "Source/3rdParty/zlib"]
+	path = Source/3rdParty/zlib
+	url = https://github.com/madler/zlib.git

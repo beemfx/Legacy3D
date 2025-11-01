@@ -70,14 +70,14 @@
     <Filter Include="lf_sys2">
       <UniqueIdentifier>{a2931d5d-81d8-416e-935b-27e07384f90f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3rdParty\zlib123">
-      <UniqueIdentifier>{e1e1bc54-5d80-4a6e-8182-e268df9198be}</UniqueIdentifier>
-    </Filter>
     <Filter Include="lc_sys2">
       <UniqueIdentifier>{851ef85b-db2f-44c0-a636-ee4344b404ee}</UniqueIdentifier>
     </Filter>
     <Filter Include="3rdParty\expat201">
       <UniqueIdentifier>{408fe799-e78f-467a-abc0-b0055258c47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\zlib">
+      <UniqueIdentifier>{e1e1bc54-5d80-4a6e-8182-e268df9198be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -318,45 +318,6 @@
     <ClCompile Include="..\lf_sys2\lf_win.c">
       <Filter>lf_sys2</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\adler32.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\compress.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\crc32.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\deflate.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\gzio.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\infback.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\inffast.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\inflate.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\inftrees.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\minigzip.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\trees.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\uncompr.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib123\zutil.c">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClCompile>
     <ClCompile Include="..\lc_sys2\lc_cinterface.cpp">
       <Filter>lc_sys2</Filter>
     </ClCompile>
@@ -375,19 +336,49 @@
     <ClCompile Include="..\lc_sys2\lc_sys2_UNICODE.cpp">
       <Filter>lc_sys2</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\expat201\xmlparse.c">
+    <ClCompile Include="..\3rdParty\zlib\adler32.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\compress.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\crc32.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\deflate.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\infback.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\inffast.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\inflate.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\inftrees.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\trees.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\uncompr.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmlparse.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\expat201\xmlrole.c">
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmlrole.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\expat201\xmltok.c">
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\expat201\xmltok_impl.c">
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_impl.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\expat201\xmltok_ns.c">
+    <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmltok_ns.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
   </ItemGroup>
@@ -624,39 +615,6 @@
     <ClInclude Include="..\lf_sys2\lf_sys2.h">
       <Filter>lf_sys2</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\crc32.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\deflate.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\inffast.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\inffixed.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\inflate.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\inftrees.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\trees.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\zconf.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\zconf.in.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\zlib.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib123\zutil.h">
-      <Filter>3rdParty\zlib123</Filter>
-    </ClInclude>
     <ClInclude Include="..\lc_sys2\lc_con.h">
       <Filter>lc_sys2</Filter>
     </ClInclude>
@@ -669,50 +627,77 @@
     <ClInclude Include="..\lc_sys2\lc_sys2.h">
       <Filter>lc_sys2</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\amigaconfig.h">
+    <ClInclude Include="..\3rdParty\zlib\crc32.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\deflate.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\inffast.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\inffixed.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\inflate.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\inftrees.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\trees.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\zconf.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\zlib.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\ascii.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\ascii.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\asciitab.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\asciitab.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\expat.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\expat.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\expat_external.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\expat_external.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\iasciitab.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\iasciitab.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\internal.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\internal.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\latin1tab.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\latin1tab.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\nametab.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\macconfig.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\siphash.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\nametab.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\utf8tab.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\utf8tab.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\winconfig.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\winconfig.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmlrole.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\xmlrole.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmltok.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\xmltok.h">
+    <ClInclude Include="..\3rdParty\libexpat\expat\lib\xmltok_impl.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\expat201\xmltok_impl.h">
-      <Filter>3rdParty\expat201</Filter>
+    <ClInclude Include="expat_config.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -727,6 +712,12 @@
     </None>
     <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
       <Filter>3rdParty\ML_lib</Filter>
+    </None>
+    <None Include="..\3rdParty\zlib\LICENSE">
+      <Filter>3rdParty\zlib</Filter>
+    </None>
+    <None Include="..\3rdParty\zlib\README">
+      <Filter>3rdParty\zlib</Filter>
     </None>
   </ItemGroup>
 </Project>
