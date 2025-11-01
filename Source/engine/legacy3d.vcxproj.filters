@@ -719,5 +719,6 @@
     <None Include="..\3rdParty\zlib\README">
       <Filter>3rdParty\zlib</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
