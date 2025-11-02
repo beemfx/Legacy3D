@@ -764,7 +764,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="DevelopMentLog.txt" />
     <Text Include="..\3rdParty\vorbis\lib\CMakeLists.txt">
       <Filter>3rdParty\vorbis\vorbis\lib</Filter>
     </Text>
