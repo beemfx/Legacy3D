@@ -138,6 +138,22 @@ WPARAM WindowLoop(HWND hwnd)
 
 	TCHAR StrCwd[1024];
 	GetCurrentDirectory( 1024 , StrCwd );
+
+	DWORD BaseDirAttributes = 0;
+	BaseDirAttributes = GetFileAttributes("baseuncmp");
+	if (BaseDirAttributes == INVALID_FILE_ATTRIBUTES || ((BaseDirAttributes&FILE_ATTRIBUTE_DIRECTORY) == 0))
+	{
+		// Base directory not found, try a base directly.
+		SetCurrentDirectoryA("..\\..\\Data");
+
+		BaseDirAttributes = GetFileAttributes("baseuncmp");
+
+		if (BaseDirAttributes == INVALID_FILE_ATTRIBUTES || ((BaseDirAttributes & FILE_ATTRIBUTE_DIRECTORY) == 0))
+		{
+			MessageBox(NULL, "Could not find game data.", "Legacy", MB_OK|MB_ICONERROR);
+			return -1;
+		}
+	}
 		
 	//Initialize the game.
 	if(!g_Game.LG_GameInit(".\\", hwnd))
