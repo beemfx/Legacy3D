@@ -75,6 +75,9 @@
     <ClCompile Include="..\3rdParty\ML_lib\ML_main.c">
       <Filter>3rdParty\ML_lib</Filter>
     </ClCompile>
+    <ClCompile Include="..\3rdParty\ML_lib\ML_mat.c">
+      <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
     <ClCompile Include="..\3rdParty\ML_lib\ML_mat_F.c">
       <Filter>3rdParty\ML_lib</Filter>
     </ClCompile>
@@ -171,15 +174,14 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="LMEdit.reg" />
+    <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm" />
+    <None Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm" />
+    <None Include="..\3rdParty\ML_lib\ML_mat.nasm">
+      <Filter>3rdParty\ML_lib</Filter>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_mat.nasm">
-      <Filter>3rdParty\ML_lib</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_3DNOW.nasm" />
-    <CustomBuild Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm" />
   </ItemGroup>
 </Project>

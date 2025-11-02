@@ -4,9 +4,15 @@ Legacy 3D Engine (c) 2008 Beem Media. All rights reserved.
 A primitive 3D engine.
 
 ## Building
-This version is not buildable since it depends on 3rd Party libraries that are
-not included in this repo. I do plan on getting it buildable, but it's mostly
-for reference.
+Make sure to grab the repo using git clone with --recursive becuase there are
+3rd Party libraries that are needed to build the game. After that
+engine_code.sln can be opened in Visual Studio 2022 and the legacy3d project can
+be built from there.
+
+LMEdit can also be built if MFC is installed with Visual Studio, though it's not
+much use. All it can be used for is viewing models, but there are no models to
+be viewed since they are all packed into pak0.lpk which there is currently no
+tool available to unpack it.
 
 ## History
 Originated: February 14, 2006
