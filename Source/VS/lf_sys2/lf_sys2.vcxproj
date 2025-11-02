@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\3rdParty\zlib\adler32.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\compress.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\crc32.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\deflate.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\gzclose.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\gzlib.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\gzread.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\infback.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\inffast.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\inflate.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\inftrees.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\trees.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\uncompr.c" />
+    <ClCompile Include="..\..\3rdParty\zlib\zutil.c" />
+    <ClCompile Include="..\..\lf_sys2\lf_bdio.c" />
+    <ClCompile Include="..\..\lf_sys2\lf_bdio_ex.c" />
+    <ClCompile Include="..\..\lf_sys2\lf_c_interface.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_err.c" />
+    <ClCompile Include="..\..\lf_sys2\lf_file.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_fs2.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_list_stack.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_lpk.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_mem.cpp" />
+    <ClCompile Include="..\..\lf_sys2\lf_misc.c" />
+    <ClCompile Include="..\..\lf_sys2\lf_win.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\3rdParty\zlib\crc32.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\deflate.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\gzguts.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\inffast.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\inffixed.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\inflate.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\inftrees.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\trees.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\zconf.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\zlib.h" />
+    <ClInclude Include="..\..\3rdParty\zlib\zutil.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_bdio.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_file.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_fs2.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_list_stack.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_lpk.h" />
+    <ClInclude Include="..\..\lf_sys2\lf_sys2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\3rdParty\zlib\configure" />
+    <None Include="..\..\3rdParty\zlib\FAQ" />
+    <None Include="..\..\3rdParty\zlib\INDEX" />
+    <None Include="..\..\3rdParty\zlib\LICENSE" />
+    <None Include="..\..\3rdParty\zlib\README" />
+    <None Include="..\..\3rdParty\zlib\zconf.h.in" />
+    <None Include="..\..\3rdParty\zlib\zlib.3" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{781f293b-fc2c-404e-a2e6-a4d48e7d671d}</ProjectGuid>
+    <RootNamespace>lfsys2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
+    <IntDir>$(OutDir)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>LF_SYS2_BUILD_DLL;WIN32;_DEBUG;LFSYS2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../3rdParty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>LF_SYS2_BUILD_DLL;WIN32;NDEBUG;LFSYS2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../3rdParty/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

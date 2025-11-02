@@ -39,7 +39,11 @@ typedef enum _LF_CREATE_MODE{
 #pragma warning(disable: 4267)
 #pragma warning(disable: 4996)
 
+#if LF_SYS2_BUILD_DLL
+#define LF_SYS2_EXPORTS __declspec(dllexport)
+#else
 #define LF_SYS2_EXPORTS
+#endif
 
 #ifdef __cplusplus
 extern "C"{

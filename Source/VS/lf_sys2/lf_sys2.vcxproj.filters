@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lf_sys2">
+      <UniqueIdentifier>{55e98d6d-b69d-4377-9e75-b9920c1c8dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{79fcc44e-a844-4961-95c2-8942c1a968b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lf_sys2\lf_bdio.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_bdio_ex.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_c_interface.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_err.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_file.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_fs2.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_list_stack.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_lpk.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_mem.cpp">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_misc.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lf_sys2\lf_win.c">
+      <Filter>lf_sys2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdParty\zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lf_sys2\lf_bdio.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lf_sys2\lf_file.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lf_sys2\lf_fs2.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lf_sys2\lf_list_stack.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lf_sys2\lf_lpk.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lf_sys2\lf_sys2.h">
+      <Filter>lf_sys2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdParty\zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\3rdParty\zlib\configure">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\FAQ">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\INDEX">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\LICENSE">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\README">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\zconf.h.in">
+      <Filter>zlib</Filter>
+    </None>
+    <None Include="..\..\3rdParty\zlib\zlib.3">
+      <Filter>zlib</Filter>
+    </None>
+  </ItemGroup>
+</Project>
