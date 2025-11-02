@@ -13,7 +13,22 @@ ml_mat* ML_MatIdentity(ml_mat* pOut)
 	return (ml_mat*)D3DXMatrixIdentity((D3DXMATRIX*)pOut);
 }
 
+ml_mat* ML_MatRotationX(ml_mat* pOut, ml_float fAngle)
+{
+	return (ml_mat*)D3DXMatrixRotationX((D3DXMATRIX*)pOut, fAngle);
+}
+
+ml_mat* ML_MatRotationY(ml_mat* pOut, ml_float fAngle)
+{
+	return (ml_mat*)D3DXMatrixRotationY((D3DXMATRIX*)pOut, fAngle);
+}
+
+ml_mat* ML_MatRotationZ(ml_mat* pOut, ml_float fAngle)
+{
+	return (ml_mat*)D3DXMatrixRotationZ((D3DXMATRIX*)pOut, fAngle);
+}
+
 ml_mat* ML_MatRotationQuat(ml_mat* pOut, const ML_QUAT* pQ)
 {
-	return (ml_mat*)D3DXMatrixRotationQuaternion(pOut, pQ);
+	return (ml_mat*)D3DXMatrixRotationQuaternion((D3DXMATRIX*)pOut, (const D3DXQUATERNION*)pQ);
 }
