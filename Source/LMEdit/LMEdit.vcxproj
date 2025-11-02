@@ -44,14 +44,14 @@
     <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
-    <IntDir>$(OutDir)</IntDir>
+    <OutDir>$(SolutionDir)_BUILD\$(PlatformShortName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)_BUILD\Int\$(ProjectName)\$(PlatformShortName)_$(Configuration)\</IntDir>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)_BUILD\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</OutDir>
-    <IntDir>$(OutDir)</IntDir>
+    <OutDir>$(SolutionDir)_BUILD\$(PlatformShortName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)_BUILD\Int\$(ProjectName)\$(PlatformShortName)_$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
