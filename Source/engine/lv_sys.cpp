@@ -481,6 +481,10 @@ lg_bool CLVideo::SetPPFromCVars(D3DPRESENT_PARAMETERS* pp)
 			D3DPRESENT_INTERVAL_ONE:
 			D3DPRESENT_INTERVAL_IMMEDIATE;
 
+#if _DEBUG
+	pp->Windowed = LG_TRUE;
+#endif
+
 	/* Now we do need to make some adjustment depending on some of the cvars. */
 	/* If we are windowed we need to set certain presentation parameters. */
 	if(pp->Windowed)
