@@ -19,7 +19,7 @@ static constexpr void LFPak_Log(const Fmt& Format, Args ... args)
 }
 
 static int LFPak_Extract(const char* Filename);
-static int LFPak_Compact(const char* Directory);
+static int LFPak_Compact(const char* Directory, const char* OutFilename);
 
 int main(int argc, const char* argv[])
 {
@@ -27,6 +27,10 @@ int main(int argc, const char* argv[])
 
 	bool bNextIsExtract = false;
 	bool bNextIsCompact = false;
+	bool bNextIsCompactOut = false;
+
+	std::string CompactDir;
+	std::string CompactFile;
 	
 	for (int i = 0; i < argc; i++)
 	{
@@ -38,7 +42,13 @@ int main(int argc, const char* argv[])
 		}
 		else if (bNextIsCompact)
 		{
-			return LFPak_Compact(argv[i]);
+			CompactDir = argv[i];
+			bNextIsCompact = false;
+		}
+		else if (bNextIsCompactOut)
+		{
+			CompactFile = argv[i];
+			bNextIsCompactOut = false;
 		}
 		else if (Arg == "-e" || Arg == "-extract")
 		{
@@ -48,13 +58,22 @@ int main(int argc, const char* argv[])
 		{
 			bNextIsCompact = true;
 		}
+		else if (Arg == "-f" || Arg == "-file")
+		{
+			bNextIsCompactOut = true;
+		}
+	}
+
+	if (CompactDir.size() > 0 && CompactFile.size() > 0)
+	{
+		return LFPak_Compact(CompactDir.c_str(), CompactFile.c_str());
 	}
 
 	LFPak_Log("Usage: ");
 	LFPak_Log("  lf_pak -e Filename");
-	LFPak_Log("  lf_pak -c $DirectoryPath");
+	LFPak_Log("  lf_pak -c $DirectoryPath -f $OutFilename");
 	LFPak_Log("-e will extract all contents of a lpk file.");
-	LFPak_Log("-c will compact a directory.");
+	LFPak_Log("-c will compact a directory and save it to $OutFilename.");
 	return -1;
 }
 
@@ -104,8 +123,29 @@ static int LFPak_Extract(const char* Filename)
 	return 0;
 }
 
-static int LFPak_Compact(const char* Directory)
+static int LFPak_Compact(const char* Directory, const char* OutFilename)
 {
-	LFPak_Log("Compact is not implemented.");
+	const std::filesystem::path AsPath(Directory);
+
+	CLArchive Archive;
+	Archive.CreateNewA(OutFilename);
+	if (!Archive.IsOpen())
+	{
+		LFPak_Log("Could not open file for writing.");
+		return -1;
+	}
+
+	for (const auto& Item : std::filesystem::recursive_directory_iterator(AsPath))
+	{
+		if (std::filesystem::is_regular_file(Item.status()))
+		{
+			const std::filesystem::path Relative = std::filesystem::relative(Item.path(), AsPath);
+
+			LFPak_Log("  Adding: {0}...", Relative.generic_string());
+
+			Archive.AddFileA(Item.path().generic_string().c_str(), Relative.generic_string().c_str(), LPK_ADD_ZLIBCMP);
+		}
+	}
+
 	return -1;
 }
