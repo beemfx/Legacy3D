@@ -76,7 +76,7 @@
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalLibraryDirectories>../3rdParty/dxlib/;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\release\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../3rdParty/dxlib/;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\$(Configuration)\lib\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -107,7 +107,7 @@
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalLibraryDirectories>../3rdParty/dxlib/;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\release\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../3rdParty/dxlib/;..\3rdParty;$(SolutionDir)packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\$(Configuration)\lib\$(PlatformShortName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
