@@ -73,9 +73,6 @@
     <Filter Include="3rdParty\expat201">
       <UniqueIdentifier>{408fe799-e78f-467a-abc0-b0055258c47b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="3rdParty\zlib">
-      <UniqueIdentifier>{e1e1bc54-5d80-4a6e-8182-e268df9198be}</UniqueIdentifier>
-    </Filter>
     <Filter Include="3rdParty\ogg">
       <UniqueIdentifier>{b49aa9d2-faf8-4698-91c4-81d0eb3722c6}</UniqueIdentifier>
     </Filter>
@@ -327,36 +324,6 @@
     <ClCompile Include="..\lc_sys2\lc_sys2_UNICODE.cpp">
       <Filter>lc_sys2</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\adler32.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\compress.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\crc32.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\deflate.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\infback.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\inffast.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\inflate.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\inftrees.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\trees.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\uncompr.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
     <ClCompile Include="..\3rdParty\libexpat\expat\lib\xmlparse.c">
       <Filter>3rdParty\expat201</Filter>
     </ClCompile>
@@ -449,21 +416,6 @@
     </ClCompile>
     <ClCompile Include="..\3rdParty\vorbis\lib\window.c">
       <Filter>3rdParty\vorbis\vorbis\lib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\gzclose.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\gzlib.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\gzread.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\gzwrite.c">
-      <Filter>3rdParty\zlib</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdParty\zlib\zutil.c">
-      <Filter>3rdParty\zlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -693,33 +645,6 @@
     <ClInclude Include="..\lc_sys2\lc_sys2.h">
       <Filter>lc_sys2</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\crc32.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\deflate.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\inffast.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\inffixed.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\inflate.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\inftrees.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\trees.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\zconf.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\zlib.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
     <ClInclude Include="..\3rdParty\libexpat\expat\lib\ascii.h">
       <Filter>3rdParty\expat201</Filter>
     </ClInclude>
@@ -837,12 +762,6 @@
     <ClInclude Include="..\3rdParty\vorbis\lib\window.h">
       <Filter>3rdParty\vorbis\vorbis\lib</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\gzguts.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdParty\zlib\zutil.h">
-      <Filter>3rdParty\zlib</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="DevelopMentLog.txt" />
@@ -860,27 +779,12 @@
     <None Include="..\3rdParty\ML_lib\ML_vec3_SSE.nasm">
       <Filter>3rdParty\ML_lib</Filter>
     </None>
-    <None Include="..\3rdParty\zlib\LICENSE">
-      <Filter>3rdParty\zlib</Filter>
-    </None>
-    <None Include="..\3rdParty\zlib\README">
-      <Filter>3rdParty\zlib</Filter>
-    </None>
     <None Include="packages.config" />
     <None Include="..\3rdParty\vorbis\lib\lookups.pl">
       <Filter>3rdParty\vorbis\vorbis\lib</Filter>
     </None>
     <None Include="..\3rdParty\vorbis\lib\Makefile.am">
       <Filter>3rdParty\vorbis\vorbis\lib</Filter>
-    </None>
-    <None Include="..\3rdParty\zlib\FAQ">
-      <Filter>3rdParty\zlib</Filter>
-    </None>
-    <None Include="..\3rdParty\zlib\INDEX">
-      <Filter>3rdParty\zlib</Filter>
-    </None>
-    <None Include="..\3rdParty\zlib\zlib.3">
-      <Filter>3rdParty\zlib</Filter>
     </None>
   </ItemGroup>
 </Project>
