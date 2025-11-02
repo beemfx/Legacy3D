@@ -67,9 +67,6 @@
     <Filter Include="common">
       <UniqueIdentifier>{74e704bb-8f46-4921-b9d8-1bd84edc02a0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="lf_sys2">
-      <UniqueIdentifier>{a2931d5d-81d8-416e-935b-27e07384f90f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="lc_sys2">
       <UniqueIdentifier>{851ef85b-db2f-44c0-a636-ee4344b404ee}</UniqueIdentifier>
     </Filter>
@@ -311,39 +308,6 @@
     </ClCompile>
     <ClCompile Include="..\common\lg_string.c">
       <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_bdio.c">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_bdio_ex.c">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_c_interface.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_err.c">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_file.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_fs2.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_list_stack.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_lpk.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_mem.cpp">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_misc.c">
-      <Filter>lf_sys2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lf_sys2\lf_win.c">
-      <Filter>lf_sys2</Filter>
     </ClCompile>
     <ClCompile Include="..\lc_sys2\lc_cinterface.cpp">
       <Filter>lc_sys2</Filter>
@@ -716,24 +680,6 @@
     </ClInclude>
     <ClInclude Include="..\common\lg_string.h">
       <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_bdio.h">
-      <Filter>lf_sys2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_file.h">
-      <Filter>lf_sys2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_fs2.h">
-      <Filter>lf_sys2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_list_stack.h">
-      <Filter>lf_sys2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_lpk.h">
-      <Filter>lf_sys2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lf_sys2\lf_sys2.h">
-      <Filter>lf_sys2</Filter>
     </ClInclude>
     <ClInclude Include="..\lc_sys2\lc_con.h">
       <Filter>lc_sys2</Filter>

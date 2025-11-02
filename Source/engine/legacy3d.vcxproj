@@ -73,6 +73,7 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>lf_sys2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -95,6 +96,7 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>lf_sys2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -165,17 +167,6 @@
     <ClCompile Include="..\lc_sys2\lc_def_UNICODE.cpp" />
     <ClCompile Include="..\lc_sys2\lc_sys2_ANSI.cpp" />
     <ClCompile Include="..\lc_sys2\lc_sys2_UNICODE.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_bdio.c" />
-    <ClCompile Include="..\lf_sys2\lf_bdio_ex.c" />
-    <ClCompile Include="..\lf_sys2\lf_c_interface.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_err.c" />
-    <ClCompile Include="..\lf_sys2\lf_file.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_fs2.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_list_stack.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_lpk.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_mem.cpp" />
-    <ClCompile Include="..\lf_sys2\lf_misc.c" />
-    <ClCompile Include="..\lf_sys2\lf_win.c" />
     <ClCompile Include="..\lm_sys\lm_mesh2.cpp" />
     <ClCompile Include="..\lm_sys\lm_mesh_anim.cpp" />
     <ClCompile Include="..\lm_sys\lm_mesh_lg.cpp" />
@@ -313,12 +304,6 @@
     <ClInclude Include="..\lc_sys2\lc_cvar.h" />
     <ClInclude Include="..\lc_sys2\lc_def.h" />
     <ClInclude Include="..\lc_sys2\lc_sys2.h" />
-    <ClInclude Include="..\lf_sys2\lf_bdio.h" />
-    <ClInclude Include="..\lf_sys2\lf_file.h" />
-    <ClInclude Include="..\lf_sys2\lf_fs2.h" />
-    <ClInclude Include="..\lf_sys2\lf_list_stack.h" />
-    <ClInclude Include="..\lf_sys2\lf_lpk.h" />
-    <ClInclude Include="..\lf_sys2\lf_sys2.h" />
     <ClInclude Include="..\lm_sys\lm_base.h" />
     <ClInclude Include="..\lm_sys\lm_mesh.h" />
     <ClInclude Include="..\lm_sys\lm_mesh_anim.h" />

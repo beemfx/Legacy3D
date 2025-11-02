@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36623.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "legacy3d", "engine\legacy3d.vcxproj", "{F8D47696-AB3C-48D8-BFB9-CE00E6D87F62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{781F293B-FC2C-404E-A2E6-A4D48E7D671D} = {781F293B-FC2C-404E-A2E6-A4D48E7D671D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LMEdit", "LMEdit\LMEdit.vcxproj", "{80C50316-FBE4-4680-B4BF-F5D0BEFEBD8A}"
 EndProject
