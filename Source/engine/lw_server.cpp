@@ -197,10 +197,12 @@ lg_void CLWorldSrv::Init()
 		Err_Printf("Using Legacy physics engine.");
 		m_pPhys=(CLPhys*)new CLPhysLegacy();
 		break;
+#if L3D_WITH_NEWTONGD_PHYSICS
 	case PHYS_ENGINE_NEWTON:
 		Err_Printf("Using Newton Game Dynamics physics engine.");
 		m_pPhys=(CLPhys*)new CLPhysNewton();
 		break;
+#endif
 #if 0
 	case PHYS_ENGINE_PHYSX:
 		Err_Printf("Using NVIDIA PHYSX physics engine.");

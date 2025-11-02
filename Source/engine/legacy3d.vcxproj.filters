@@ -79,6 +79,33 @@
     <Filter Include="3rdParty\zlib">
       <UniqueIdentifier>{e1e1bc54-5d80-4a6e-8182-e268df9198be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="3rdParty\ogg">
+      <UniqueIdentifier>{b49aa9d2-faf8-4698-91c4-81d0eb3722c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\ogg\src">
+      <UniqueIdentifier>{f3063383-65a3-4b29-91dd-53d137496c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vorbis">
+      <UniqueIdentifier>{d2ade454-b651-4132-9a36-b045c2aa6422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vorbis\vorbis">
+      <UniqueIdentifier>{ca80acf6-28a2-491e-bff0-216af56f4492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vorbis\vorbis\include">
+      <UniqueIdentifier>{42ed37c6-b8cb-4107-a214-8f3ad4c5cc2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\ogg\include">
+      <UniqueIdentifier>{f2f21ab4-88d9-4373-83b3-d2622a369a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\ogg\include\ogg">
+      <UniqueIdentifier>{52b50ee6-0c49-4b50-8f88-5eb2de044c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vorbis\vorbis\include\vorbis">
+      <UniqueIdentifier>{ae8c249e-15c5-4db6-a95d-6c4f2c9fe978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vorbis\vorbis\lib">
+      <UniqueIdentifier>{6c7a7b87-18d0-4569-92a0-d14a1eac6fb3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\common\common.c">
@@ -383,6 +410,96 @@
     </ClCompile>
     <ClCompile Include="..\3rdParty\ML_lib\ML_mat.c">
       <Filter>3rdParty\ML_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ogg\src\bitwise.c">
+      <Filter>3rdParty\ogg\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ogg\src\framing.c">
+      <Filter>3rdParty\ogg\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\analysis.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\barkmel.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\bitrate.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\block.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\codebook.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\envelope.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\floor0.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\floor1.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\info.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\lookup.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\lpc.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\lsp.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\mapping0.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\mdct.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\psy.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\registry.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\res0.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\sharedbook.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\smallft.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\synthesis.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\vorbisenc.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\vorbisfile.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\vorbis\lib\window.c">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\gzclose.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\gzlib.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\gzread.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\gzwrite.c">
+      <Filter>3rdParty\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\zlib\zutil.c">
+      <Filter>3rdParty\zlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -702,9 +819,90 @@
     <ClInclude Include="expat_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\3rdParty\ogg\include\ogg\ogg.h">
+      <Filter>3rdParty\ogg\include\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ogg\include\ogg\os_types.h">
+      <Filter>3rdParty\ogg\include\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ogg\src\crctable.h">
+      <Filter>3rdParty\ogg\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\include\vorbis\codec.h">
+      <Filter>3rdParty\vorbis\vorbis\include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\include\vorbis\vorbisenc.h">
+      <Filter>3rdParty\vorbis\vorbis\include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\include\vorbis\vorbisfile.h">
+      <Filter>3rdParty\vorbis\vorbis\include\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\backends.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\bitrate.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\codebook.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\codec_internal.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\envelope.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\highlevel.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\lookup.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\lookup_data.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\lpc.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\lsp.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\masking.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\mdct.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\os.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\psy.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\registry.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\scales.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\smallft.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\vorbis\lib\window.h">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\gzguts.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\zlib\zutil.h">
+      <Filter>3rdParty\zlib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="DevelopMentLog.txt" />
+    <Text Include="..\3rdParty\vorbis\lib\CMakeLists.txt">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\3rdParty\ML_lib\ML_mat.nasm">
@@ -723,5 +921,20 @@
       <Filter>3rdParty\zlib</Filter>
     </None>
     <None Include="packages.config" />
+    <None Include="..\3rdParty\vorbis\lib\lookups.pl">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </None>
+    <None Include="..\3rdParty\vorbis\lib\Makefile.am">
+      <Filter>3rdParty\vorbis\vorbis\lib</Filter>
+    </None>
+    <None Include="..\3rdParty\zlib\FAQ">
+      <Filter>3rdParty\zlib</Filter>
+    </None>
+    <None Include="..\3rdParty\zlib\INDEX">
+      <Filter>3rdParty\zlib</Filter>
+    </None>
+    <None Include="..\3rdParty\zlib\zlib.3">
+      <Filter>3rdParty\zlib</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -7,9 +7,11 @@
 
 #include "../lc_sys2/lc_sys2.h"
 
-CLSndMgr::CLSndMgr():
-	m_pAudioContext(LG_NULL),
-	m_pAudioDevice(LG_NULL)
+CLSndMgr::CLSndMgr()
+#if L3D_WITH_OPENAL_AUDIO
+	: m_pAudioContext(LG_NULL)
+	, m_pAudioDevice(LG_NULL)
+#endif
 {
 
 }
@@ -56,13 +58,16 @@ void CLSndMgr::Update()
 	//Process audio...
 	//m_TestSnd2.Update();
 	m_MusicTrack.Update();
+#if L3D_WITH_OPENAL_AUDIO
 	alcProcessContext(m_pAudioContext);
 	//Suspend the context till the next frame...
 	alcSuspendContext(m_pAudioContext);
+#endif
 }
 
 lg_bool CLSndMgr::LS_Init()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	ALCenum nALCError;
 	const ALCchar* szDevice=alcGetString(LG_NULL, ALC_DEFAULT_DEVICE_SPECIFIER);// szDevice[]="DirectSound3D";
 	
@@ -109,10 +114,15 @@ lg_bool CLSndMgr::LS_Init()
 	m_bSndAvailable=LG_TRUE;
 	
 	return LG_TRUE;
+#else
+	m_bSndAvailable = LG_TRUE;
+	return LG_TRUE;
+#endif
 }
 
 void CLSndMgr::LS_Shutdown()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	//Close the music track...
 	m_MusicTrack.Close();
 	
@@ -137,8 +147,12 @@ void CLSndMgr::LS_Shutdown()
 	}
 	m_bSndAvailable=LG_FALSE;
 	return;
+#else
+	m_bSndAvailable = LG_FALSE;
+#endif
 }
 
+#if L3D_WITH_OPENAL_AUDIO
 lg_bool CLSndMgr::LS_LoadSoundIntoBuffer(ALuint sndBuffer, lg_str szFilename)
 {
 	CLSndFile sndFile;
@@ -152,7 +166,9 @@ lg_bool CLSndMgr::LS_LoadSoundIntoBuffer(ALuint sndBuffer, lg_str szFilename)
 	alGetError();
 	return LG_TRUE;
 }
+#endif
 
+#if L3D_WITH_OPENAL_AUDIO
 ALenum CLSndMgr::GetALFormat(lg_dword nChannels, lg_dword nBPS)
 {
 	//Only the following sound file formats are supported...
@@ -167,3 +183,4 @@ ALenum CLSndMgr::GetALFormat(lg_dword nChannels, lg_dword nBPS)
 	else
 		return -1;
 }
+#endif

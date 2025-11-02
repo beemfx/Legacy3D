@@ -1,8 +1,10 @@
 #ifndef __LS_SYS_H__
 #define __LS_SYS_H__
 
+#if L3D_WITH_OPENAL_AUDIO
 #include <al/al.h>
 #include <al/alc.h>
+#endif
 
 #include "lg_types.h"
 #include "ls_stream.h"
@@ -13,6 +15,7 @@ class CLSndMgr
 private:
 	lg_bool              m_bSndAvailable;
 	
+#if L3D_WITH_OPENAL_AUDIO
 	//OpenAL Interfaces
 	ALCcontext* m_pAudioContext;
 	ALCdevice* m_pAudioDevice;
@@ -21,11 +24,14 @@ private:
 	//ALuint m_TestSnd;
 	//ALuint m_TestSndBuffer;
 	//CLSndStream m_TestSnd2;
+#endif
 	
 	//The background music track
 	CLSndStream m_MusicTrack;
-public:	
+public:
+#if L3D_WITH_OPENAL_AUDIO
 	static ALenum GetALFormat(lg_dword nChannels, lg_dword nBitsPerSample);
+#endif
 public:
 	CLSndMgr();
 	~CLSndMgr();
@@ -42,7 +48,9 @@ public:
 	void Music_Resume();
 	void Music_UpdateVolume();
 	
+#if L3D_WITH_OPENAL_AUDIO
 	static lg_bool LS_LoadSoundIntoBuffer(ALuint sndBuffer, lg_str szFilename);
+#endif
 };
 
 #endif __LS_SYS_H__

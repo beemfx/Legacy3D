@@ -1,3 +1,5 @@
+#if L3D_WITH_NEWTONGD_PHYSICS
+
 #ifndef __NEWTON2_H__
 #define __NEWTON2_H__
 #include "lp_sys2.h"
@@ -40,3 +42,5 @@ private:
 };
 
 #endif __NEWTON2_H__
+
+#endif

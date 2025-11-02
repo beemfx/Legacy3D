@@ -1,3 +1,5 @@
+#if L3D_WITH_NEWTONGD_PHYSICS
+
 #include "lp_newton2.h"
 #include "lg_err_ex.h"
 #include "lg_err.h"
@@ -395,3 +397,5 @@ void CLPhysNewton::UpdateToSrv(const NewtonBody* const body, const dFloat* const
 	//Call the post physics AI routine.
 	pEnt->m_pAI->PostPhys(pEnt);
 }
+
+#endif

@@ -15,16 +15,6 @@ void ZLIB_Free(voidpf opaque, voidpf address)
 	LF_Free(address);
 }
 
-voidpf zcalloc(voidpf opaque, uInt items, uInt size)
-{
-	return ZLIB_Alloc(opaque, items, size);
-}
-
-void zcfree(voidpf opaque, voidpf address)
-{
-	ZLIB_Free(opaque, address);
-}
-
 lf_dword BDIO_WriteCompressed(BDIO_FILE File, lf_dword nSize, void* pInBuffer)
 {
 	lf_dword nWritten=0;

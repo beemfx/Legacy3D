@@ -12,12 +12,16 @@
 	
 lg_bool CLSndStream::CheckError()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	ALenum nError=alGetError();
 	if(nError==AL_NO_ERROR)
 		return LG_FALSE;
 	
 	Err_Printf("Sound Stream ERROR %u: %s", nError, "ERROR MESSAGE GOES HERE");
 	return LG_TRUE;
+#else
+	return LG_TRUE;
+#endif
 }
 	
 CLSndStream::CLSndStream():
@@ -39,10 +43,13 @@ void CLSndStream::SetVolume(lg_int nVolume)
 	if(!m_bOpen)
 		return;
 	nVolume=LG_Clamp(nVolume, 0, 100);	
+#if L3D_WITH_OPENAL_AUDIO
 	alSourcef(m_Source, AL_GAIN, nVolume/100.0f);
+#endif
 }
 lg_bool CLSndStream::Load(lg_str szPath)
 {
+#if L3D_WITH_OPENAL_AUDIO
 	Close();
 	Err_Printf("Loading \"%s\" as a streaming sound...", szPath);
 	if(!m_cSndFile.Open(szPath))
@@ -101,9 +108,13 @@ lg_bool CLSndStream::Load(lg_str szPath)
 	m_bLoop=LG_FALSE;
 	SetVolume(100);
 	return LG_TRUE;
+#else
+	return LG_TRUE;
+#endif
 }
 void CLSndStream::Close()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	if(!m_bOpen)
 		return;
 	LG_Free(m_pTempBuffer);
@@ -118,7 +129,10 @@ void CLSndStream::Close()
 	m_bPlaying=LG_FALSE;
 	m_bPaused=LG_FALSE;
 	m_bLoop=LG_FALSE;
+#endif
 }
+
+#if L3D_WITH_OPENAL_AUDIO
 lg_bool CLSndStream::UpdateBuffer(ALuint buffer)
 {
 	if(!m_bPlaying)
@@ -143,8 +157,11 @@ lg_bool CLSndStream::UpdateBuffer(ALuint buffer)
 	CheckError();
 	return nRead==m_nTempBufferSize?LG_TRUE:LG_FALSE;
 }
+#endif
+
 void CLSndStream::Play(lg_bool bLoop)
 {
+#if L3D_WITH_OPENAL_AUDIO
 	if(!m_bOpen)
 		return;
 		
@@ -167,9 +184,11 @@ void CLSndStream::Play(lg_bool bLoop)
 	}
 	alSourceQueueBuffers(m_Source, 2, m_Buffers);
 	alSourcePlay(m_Source);
+#endif
 }
 void CLSndStream::Stop()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	if(!m_bOpen)
 		return;
 	alSourceStop(m_Source);
@@ -177,16 +196,20 @@ void CLSndStream::Stop()
 	m_cSndFile.Reset();
 	m_bPlaying=LG_FALSE;
 	m_bPaused=LG_FALSE;
+#endif
 }
 void CLSndStream::Pause()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	if(!m_bOpen)
 		return;
 	alSourcePause(m_Source);
 	m_bPaused=LG_TRUE;
+#endif
 }
 void CLSndStream::Update()
 {
+#if L3D_WITH_OPENAL_AUDIO
 	if(!m_bPlaying || m_bPaused || !m_bOpen)
 		return;
 		
@@ -213,4 +236,5 @@ void CLSndStream::Update()
 	alGetSourcei(m_Source, AL_SOURCE_STATE, &nState);
 	if(nState!=AL_PLAYING)
 		alSourcePlay(m_Source);
+#endif
 }	
