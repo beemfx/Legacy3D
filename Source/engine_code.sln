@@ -12,6 +12,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LMEdit", "LMEdit\LMEdit.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lf_sys2", "VS\lf_sys2\lf_sys2.vcxproj", "{781F293B-FC2C-404E-A2E6-A4D48E7D671D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lf_pak", "VS\lf_pak\lf_pak.vcxproj", "{9FA0590F-74D3-4573-B01C-B26DB2F17947}"
+	ProjectSection(ProjectDependencies) = postProject
+		{781F293B-FC2C-404E-A2E6-A4D48E7D671D} = {781F293B-FC2C-404E-A2E6-A4D48E7D671D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -30,6 +35,10 @@ Global
 		{781F293B-FC2C-404E-A2E6-A4D48E7D671D}.Debug|Win32.Build.0 = Debug|Win32
 		{781F293B-FC2C-404E-A2E6-A4D48E7D671D}.Release|Win32.ActiveCfg = Release|Win32
 		{781F293B-FC2C-404E-A2E6-A4D48E7D671D}.Release|Win32.Build.0 = Release|Win32
+		{9FA0590F-74D3-4573-B01C-B26DB2F17947}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9FA0590F-74D3-4573-B01C-B26DB2F17947}.Debug|Win32.Build.0 = Debug|Win32
+		{9FA0590F-74D3-4573-B01C-B26DB2F17947}.Release|Win32.ActiveCfg = Release|Win32
+		{9FA0590F-74D3-4573-B01C-B26DB2F17947}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="lf_pak">
+      <UniqueIdentifier>{27c3ea2f-a9ff-4f82-ba52-0617a19709b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lf_pak\lf_pak.cpp">
+      <Filter>lf_pak</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
