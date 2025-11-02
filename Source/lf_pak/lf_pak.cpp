@@ -58,43 +58,6 @@ int main(int argc, const char* argv[])
 	return -1;
 }
 
-static std::vector<std::string> LFPak_SplitFileParts(const wchar_t* Filename)
-{
-	const std::wstring FilenameAsString(Filename);
-	std::vector<std::string> Out;
-
-	Out.push_back("");
-
-	for (std::size_t i = 0; i < FilenameAsString.size(); i++)
-	{
-		const char c = FilenameAsString[i];
-
-		if (c == '/' || c == '\\')
-		{
-			Out.push_back("");
-		}
-		else
-		{
-			// We know everything is an ANSI string so just put it in.
-			Out.back() += c;
-		}
-	}
-
-	return Out;
-}
-
-static std::filesystem::path LfPak_AppendPath(const std::filesystem::path& RootDir, const std::vector<std::string>& PathParts)
-{
-	std::filesystem::path PathToData = RootDir;
-
-	for (int i = 0;  i < PathParts.size(); i++)
-	{
-		PathToData = PathToData / PathParts[i];
-	}
-
-	return PathToData;
-}
-
 static int LFPak_Extract(const char* Filename)
 {
 	const std::filesystem::path AsPath(Filename);
@@ -117,9 +80,7 @@ static int LFPak_Extract(const char* Filename)
 	{
 		if (const LPK_FILE_INFO* Info = Archive.GetFileInfo(i))
 		{
-			const std::vector<std::string> FileParts = LFPak_SplitFileParts(Info->szFilename);
-
-			std::filesystem::path ExtractTo = LfPak_AppendPath(RootDir, FileParts);
+			std::filesystem::path ExtractTo = RootDir / Info->szFilename;// LfPak_AppendPath(RootDir, FileParts);
 
 			LFPak_Log("  Extracting {0}...", ExtractTo.string());
 
